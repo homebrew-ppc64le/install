@@ -10,7 +10,7 @@ fi
 # On Linux, it installs to /home/linuxbrew/.linuxbrew if you have sudo access
 # and ~/.linuxbrew otherwise.
 # To install elsewhere (which is unsupported)
-# you can untar https://github.com/Homebrew/brew/tarball/master
+# you can untar https://github.com/homebrew-ppc64le/brew/tarball/master
 # anywhere you like.
 if [[ -z "${HOMEBREW_ON_LINUX-}" ]]; then
   HOMEBREW_PREFIX="/usr/local"
@@ -30,7 +30,7 @@ else
   CHGRP="/bin/chgrp"
   GROUP="$(id -gn)"
 fi
-BREW_REPO="https://github.com/Homebrew/brew"
+BREW_REPO="https://github.com/homebrew-ppc64le/brew"
 
 # TODO: bump version when new macOS is released
 MACOS_LATEST_SUPPORTED="10.15"

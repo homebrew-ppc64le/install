@@ -214,7 +214,7 @@ fi
 if [[ -s $HOMEBREW_REPOSITORY/.gitignore ]]; then
   gitignore=$(<"$HOMEBREW_REPOSITORY/.gitignore")
 else
-  gitignore=$(curl -fsSL https://raw.githubusercontent.com/Homebrew/brew/master/.gitignore)
+  gitignore=$(curl -fsSL https://raw.githubusercontent.com/homebrew-ppc64le/brew/master/.gitignore)
 fi
 [[ -n $gitignore ]] || abort "Failed to fetch Homebrew .gitignore!"
 
