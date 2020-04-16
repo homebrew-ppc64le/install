@@ -4,6 +4,20 @@ set -u
 # First check if the OS is Linux.
 if [[ "$(uname)" = "Linux" ]]; then
   HOMEBREW_ON_LINUX=1
+
+  . /etc/os-release
+
+  # Fedora 30 or newer requires libxcrypt-compat
+  if [[ "$ID" == "fedora" ]]
+  then
+    if (( $VERSION_ID >= 30 )); then
+      if ! yum list installed libxcrypt-compat &>/dev/null
+      then
+        echo "Please install libxcrypt-compat with command: yum install libxcrypt-compat"
+        exit 1
+      fi
+    fi
+  fi
 fi
 
 # On macOS, this script installs to /usr/local only.
