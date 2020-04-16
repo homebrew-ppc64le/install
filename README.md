@@ -3,6 +3,7 @@
 ## Install Homebrew
 
 ```bash
+export HOMEBREW_DEVELOPER=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/homebrew-ppc64le/install/master/install.sh)"
 ```
 
